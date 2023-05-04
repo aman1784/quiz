@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-image: url("../img.webp");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 800px;
+    background-color: #e5e7da;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+    min-height: 320px;
+    padding: 75px 85px;
+    border-radius: 15px;
+    display: flex;
+}
+
+.leftSide, .rightSide{
+    width: 50%;
+}
+
+.leftSide img{
+    position: relative;
+    top: 40px;    
+}
+
+.leftSide:hover{
+    transform: rotate(1turn);
+    rotate: 360deg;
+    transition: all 5s ease-in-out;
+}
+
+.rightSide h1{
+    color: blue;
+    font-size: 35px;
+}
+
+.rightSide h2{
+    margin: 20px auto 10px;
+    font-size: 27px;
+}
+
+.rightSide ul{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+.rightSide ul li {
+    margin-top: 5px;
+}
+
+.rightSide a{
+    background-color: #2faafc;
+    color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    width: 70%;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.rightSide a:hover{
+    padding: 16px 0;
+    color: #033838;
+    background-color: #dfda99;
+}
+
+/* Question page*/
+.box{
+    background-color: #e5e7da;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    min-height: 320px;
+    width: 700px;
+    padding: 50px;
+}
+
+.title{
+    border-bottom: 1px solid rgb(66, 52, 52);
+    color: rgb(66, 52, 52);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.header{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.scoreBox, .timerBox{
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid rgb(66, 52, 52);
+}
+
+.questionBox{
+    background-color: #033838;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.optionBox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.optionBox span{
+    background-color: #83a2af;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    border: 1px solid rgb(66, 52, 52);
+    padding: 10px 15px;
+}
+
+.optionBox span:hover{
+    background-color: #d6d5a0;
+    border: 2px dashed slateblue;
+    padding: 9px 10px;
+    transition: all 1s ease-out;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer button{
+    background-color: #2faafc;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.footer button:hover{
+    color: white;
+    background-color: #033838;
+    padding: 6px 13px;
+}
+
+.resultBox{
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    font-size: 20px;
+}
+
+.resultBox *:nth-child(odd){
+    text-align: right;
+}   
+
+.resultBox span{
+    font-weight: 600;
+}
+
+.buttonBox{
+    border-top: 1px solid rgb(66, 52, 52);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.buttonBox a{
+    background-color: #2faafc;
+    color: #000;
+    border-radius: 20px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none; 
+    padding: 8px 15px;
+}
+
+.buttonBox a:hover{
+    color: white;
+    padding: 7px 10px;
+}
+
+.optionBox span.right{
+    background-color: rgb(48, 230, 31);
+    border-color: rgb(48, 230, 31);
+    color: #fff;
+}
+.optionBox span.wrong{
+    background-color: red;
+    border-color: red;
+    color: #fff
+}
+/* Question page*/
+
+
+/* Media Query*/
+@media screen and (max-width: 768px) {
+    .leftSide{
+        display: none;
+    }
+    .container, .box{
+        width: 425px;
+    }
+    .rightSide{
+        width: 100%;
+    }
+    .optionBox{
+        grid-template-columns: 1fr;
+    }
+    .resultScreen{
+        width: 100%;
+    }
+}
+/* Media Query*/
