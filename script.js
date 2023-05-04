@@ -29,8 +29,7 @@ $(function () {
             clearInterval(timer);
         }
         
-    }, 1000); // timer set for 1 second interval
-    // timer code
+    }, 1000);
 
     printQuestion(index);
 });
@@ -64,8 +63,7 @@ function checkAnswer(option) {
     $(".scoreBox span").text(score);
 
     $(".optionBox span").attr("onclick", "");
-}   
-// Function to check answer
+}  
 
 
 // Function For next question
@@ -84,7 +82,6 @@ function showNext() {
     
     printQuestion(index);
 }
-// Function For next question
 
 // Function for result
 function showResult(j){
@@ -94,7 +91,6 @@ function showResult(j){
 
     result();
 }
-// Function for result
 
 // Result function
 function result(){
@@ -103,7 +99,7 @@ function result(){
 
     $("#totalQuestion").text(totalQuestion);
     $("#attemptQuestion").text(attempt);
+    $("#unattemptQuestion").text(totalQuestion - attempt);
     $("#correctAnswers").text(score);
     $("#wrongAnswers").text(wrong);
 }
-// Result function
